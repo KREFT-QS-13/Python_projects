@@ -1,15 +1,11 @@
 # Implementation of a recursive Euclidean algorithm and an extended Euclidean algorithm
 def Euclidean(m,n):
-    m = int(m)
-    n = int(n)
     if m%n == 0:
         return n
     else:
         return Euclidean(n, m%n)
 
 def Extended_Euclidean(m,n):
-    m = int(m)
-    n = int(n)
     x, px = 0, 1
     y, py = 1, 0
 
@@ -30,8 +26,8 @@ def Extended_Euclidean(m,n):
     # return m // this is the greatest common divisor of m ans n
     return px, py
 
-a = input("Enter number a: ")
-b = input("Enter number b: ")
+a = int(input("Enter number a: "))
+b = int(input("Enter number b: "))
 
 x, y = Extended_Euclidean(a,b)
 
